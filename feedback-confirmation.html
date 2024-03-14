@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NetBook - Feedback Confirmation</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  
+  
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+      
+      <style>
+         #success_message{ display: none;}
+			 legend {
+			 text-align: center;
+			 font-weight: bold;
+			 font-size: 27px;
+         }
+		 .form-horizontal .has-feedback .form-control-feedback {
+			top: 0;
+			right: 15px;
+			position: absolute;
+			padding-top: 9px;
+		}
+      </style>
+      <script>
+         window.console = window.console || function(t) {};
+      </script>
+      <script>
+         if (document.location.search.match(/type=embed/gi)) {
+           window.parent.postMessage("resize", "*");
+         }
+      </script>
+  
+  
+  <!--<link href="css/bootstrap.min.css" rel="stylesheet">
+    Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet"> 
+  
+  
+      <script>
+         window.console = window.console || function(t) {};
+      </script>
+      <script>
+         if (document.location.search.match(/type=embed/gi)) {
+           window.parent.postMessage("resize", "*");
+         }
+      </script>
+	<style>
+		.wrap-login100 {
+			width: 670px;
+			border-radius: 10px;
+			overflow: hidden;
+			position: relative;
+		}
+		.login100-form-title {
+			width: 100%;
+			position: relative;
+			z-index: 1;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			padding: 100px 15px 100px 15px;
+			margin-bottom: 10px;
+		}
+		legend {
+			display: block;
+			width: 100%;
+			padding: 0;
+			margin-bottom: 20px;
+			font-size: 21px;
+			line-height: inherit;
+			color: #333;
+			border: 0;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		legend {
+			padding: 0;
+			border: 0;
+		}
+		form#contact_form {
+			background-image: linear-gradient(to bottom,#e8e8e8 0,#f5f5f5 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
+			background-repeat: repeat-x;
+			border-color: #dcdcdc;
+			-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
+			box-shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
+		}
+		fieldset {
+			display: block;
+			margin-inline-start: 2px;
+			margin-inline-end: 2px;
+			padding-block-start: 0.35em;
+			padding-inline-start: 0.75em;
+			padding-inline-end: 0.75em;
+			padding-block-end: 0.625em;
+			min-inline-size: min-content;
+			margin-top: 30px;
+			border-style: groove;
+			border-color: threedface;
+			border-image: initial;
+		}
+		.form-horizontal .form-group {
+			margin-right: -15px;
+			margin-left: -15px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		.input-group {
+			position: relative;
+			display: table;
+			border-collapse: separate;
+		}
+		.input-group-addon:first-child {
+			border-right: 0;
+		}
+		.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child>.btn-group:not(:last-child)>.btn {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		.input-group-addon {
+			padding: 6px 12px;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1;
+			color: #555;
+			text-align: center;
+			background-color: #eee;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		.input-group-addon, .input-group-btn {
+			width: 1%;
+			white-space: nowrap;
+			vertical-align: middle;
+		}
+		.input-group-addon, .input-group-btn, .input-group .form-control {
+			display: table-cell;
+		}
+		.glyphicon {
+			position: relative;
+			top: 1px;
+			display: inline-block;
+			font-family: 'Glyphicons Halflings';
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.input-group .form-control {
+			position: relative;
+			z-index: 2;
+			float: left;
+			width: 100%;
+			margin-bottom: 0;
+		}
+		.form-control {
+			display: block;
+			width: 100%;
+			height: 34px;
+			padding: 6px 12px;
+			font-size: 14px;
+			line-height: 1.42857143;
+			color: #555;
+			background-color: #fff;
+			background-image: none;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+			-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		}
+		input, button, select, textarea {
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+		}
+		input {
+			line-height: normal;
+		}
+		button, input, optgroup, select, textarea {
+			margin: 0;
+			font: inherit;
+			color: inherit;
+		}
+	</style>
+  
+
+  <!-- =======================================================
+    Template Name: SoftLand
+    Template URL: https://bootstrapmade.com/softland-bootstrap-app-landing-page-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com/
+  ======================================================= -->
+</head>
+
+<body>
+    
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-lg-2">
+            <a href="index.html" class="mb-0"><img src="img/logo/logo-h-trans-70.png" width="192" height="70"></a>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-lg-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active"><a href="index.html" class="nav-link">Home</a></li>
+				<!--<li><a href="about.html" class="nav-link">About</a></li> -->
+				<li><a href="registration.html" class="nav-link">Registration</a></li>
+				<!--
+				<li class="has-children">
+                  <a class="nav-link">Trainings</a>
+                  <ul class="dropdown">
+                    <li><a href="registration.html" class="nav-link">Registration</a></li>
+                  </ul>
+                </li>
+				-->
+				<li><a href="courses.html" class="nav-link">Courses</a></li>
+				<li><a href="services.html" class="nav-link">Services</a></li>
+				<!--
+				<li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="has-children">
+                  <a href="documents.html" class="nav-link">Documents</a>
+                  <ul class="dropdown">
+                    <li><a href="mulesoft.html" class="nav-link">Mulesoft</a></li>
+                    <li><a href="spring-boot.html" class="nav-link">Spring Boot</a></li>
+                  </ul>
+                </li>
+				-->
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-lg-none ml-md-0 py-3" style="position: relative; top: 3px;">
+
+            <a href="#" class="burger site-menu-toggle js-menu-toggle" data-toggle="collapse"
+              data-target="#main-navbar">
+              <span></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+
+    <main id="main">
+      <div class="hero-section-sub inner-page">
+        
+        <div class="container-sub">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row justify-content-center">
+				
+                <div class="col-md-7 text-center hero-text">
+					<h2 data-aos="fade-up" data-aos-delay="" style="max-width: 100%;margin-top: 100px;color: #FFF;">Feedback Confirmation</h2>
+					<p class="mb-5" data-aos="fade-up"  data-aos-delay="100">We received your feedback.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="site-section">
+        <div class="container">
+          <!-- <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-6">
+              <h6 class="section-heading">Training Registration</h6>
+            </div>
+          </div>
+		  -->
+          <div class="row justify-content-center text-center">
+            <div class="wrap-login100">
+			 <form class="well form-horizontal" method="post" id="contact_form_confirm">
+				<div class="login100-form-title" style="background-image: url(img/feedback.jpg); background-repeat: no-repeat; background-size: 100% 95%;">
+					<span class="login100-form-title-1">
+					</span>
+				</div>
+				<fieldset> 
+				   <div class="success" role="success" id="success_msg" style="color: #000">Thank you for your valuable feedback. This will help us to provide better services to you.</div>
+				   
+				</fieldset>
+			 </form>
+      
+         
+			</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    
+	<footer class="footer" role="contentinfo">
+		<div class="site-section cta-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+             <img src="img/logo/logo-f-trans-150.png" alt="NetBook">
+            
+          </div>
+          <div class="col-md-7 ml-auto">
+            <div class="row site-section pt-0">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <h3>Navigation</h3>
+                <ul class="list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="registration.html">Registration</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4 mb-md-0">
+                <h3>Services</h3>
+                <ul class="list-unstyled">
+                  <li><a href="services.html#AppDevelopment">App Development</a></li>
+                  <li><a href="services.html#Trainings">Trainings</a></li>
+                  <li><a href="services.html#Consulting">Consulting</a></li>
+                  <li><a href="services.html#AppSupport">Application Support</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4 mb-md-0">
+                <h3>Connect with Us</h3>
+                <ul class="list-unstyled">
+                  <li><a href="https://twitter.com/NetBook14113018" target=”_blank”><span class="icofont-twitter"></span> Twitter</a></li>
+                  <li><a href="https://www.facebook.com/NetBook-102186104874581" target=”_blank”><span class="icofont-facebook"></span> Facebook</a></li>
+				  <li><a href="https://www.youtube.com/channel/UC_KXba_ns9jkwlvfoj-4URg?view_as=subscriber" target=”_blank”><span class="icofont-brand-youtube"></span> Youtube</a></li>
+                  <li><a href="https://www.instagram.com/netbook4contact/" target=”_blank”><span class="icofont-instagram"></span> Instagram</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+          <div class="col-md-7">
+            <p class="copyright">&copy; Copyright NetBook. All Rights Reserved</p>
+            <!--  <div class="credits">
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div> --> 
+          </div>
+        </div>
+
+      </div>
+	  </div>
+
+    </footer>
+  </div> <!-- .site-wrap -->
+  
+  <!-- Vendor JS Files -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery-migrate.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/easing/easing.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/sticky/sticky.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+      <script id="rendered-js">
+         $(document).ready(function () {
+           $('#contact_form').bootstrapValidator({
+             // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+             feedbackIcons: {
+               valid: 'glyphicon glyphicon-ok',
+               invalid: 'glyphicon glyphicon-remove',
+               validating: 'glyphicon glyphicon-refresh' },
+         
+             fields: {
+               full_name: {
+                 validators: {
+                   stringLength: {
+                     min: 2 },
+         
+                   notEmpty: {
+                     message: 'Please supply your Full name' } } },
+         
+         
+         
+               last_name: {
+                 validators: {
+                   stringLength: {
+                     min: 2 },
+         
+                   notEmpty: {
+                     message: 'Please supply your last name' } } },
+         
+         
+         
+               email: {
+                 validators: {
+                   notEmpty: {
+                     message: 'Please supply your email address' },
+         
+                   emailAddress: {
+                     message: 'Please supply a valid email address' } } },
+         
+         
+         
+               phone: {
+                 validators: {
+                   notEmpty: {
+                     message: 'Please supply your phone number' },
+         
+                   phone: {
+                     country: 'US',
+                     message: 'Please supply a vaild phone number with area code' } } },
+         
+         
+         
+               address: {
+                 validators: {
+                   stringLength: {
+                     min: 8 },
+         
+                   notEmpty: {
+                     message: 'Please supply your street address' } } },
+         
+				course: {
+                 validators: {
+                   stringLength: {
+                     min: 4 },
+         
+                   notEmpty: {
+                     message: 'Please select the course' } } },
+         
+               city: {
+                 validators: {
+                   stringLength: {
+                     min: 4 },
+         
+                   notEmpty: {
+                     message: 'Please supply your city' } } },
+         
+         
+         
+               country: {
+                 validators: {
+                   notEmpty: {
+                     message: 'Please select your country' } } },
+         
+         
+         
+               zip: {
+                 validators: {
+                   notEmpty: {
+                     message: 'Please supply your zip code' },
+         
+                   zipCode: {
+                     country: 'US',
+                     message: 'Please supply a vaild zip code' } } },
+         
+         
+         
+                } }).
+         
+         
+         
+         
+         
+           on('success.form.bv', function (e) {
+             $('#success_message').slideDown({ opacity: "show" }, "slow"); // Do something ...
+             $('#contact_form').data('bootstrapValidator').resetForm();
+         
+             // Prevent form submission
+             e.preventDefault();
+         
+             // Get the form instance
+             var $form = $(e.target);
+         
+             // Get the BootstrapValidator instance
+             var bv = $form.data('bootstrapValidator');
+         
+             // Use Ajax to submit form data
+             $.post($form.attr('action'), $form.serialize(), function (result) {
+               console.log(result);
+             }, 'json');
+           });
+         });
+         //# sourceURL=pen.js
+             
+      </script>
+
+  </body>
+</html>
